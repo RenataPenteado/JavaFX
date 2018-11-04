@@ -17,6 +17,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import javafx.util.Duration;
 
 /**
@@ -35,7 +36,7 @@ public class SplashScreenController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-        FadeTransition fadeTransition = new FadeTransition(Duration.millis(5000), image);
+        FadeTransition fadeTransition = new FadeTransition(Duration.millis(2000), image);
         fadeTransition.setFromValue(1.0);
         fadeTransition.setToValue(0);
         
@@ -50,6 +51,7 @@ public class SplashScreenController implements Initializable {
                 }
                 Scene scene = new Scene(root, 720, 600);
                 loginScreen.setScene(scene);
+                loginScreen.initStyle(StageStyle.TRANSPARENT);
                 
                 Stage current = (Stage) image.getScene().getWindow();
                 current.hide();

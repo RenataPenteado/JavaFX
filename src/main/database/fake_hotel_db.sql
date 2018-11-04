@@ -19,7 +19,7 @@
 -- Current Database: `fake_hotel_db`
 --
 
-DROP DATABASE IF EXISTS `fake_hotel_db`;
+/*!40000 DROP DATABASE IF EXISTS `fake_hotel_db`*/;
 
 CREATE DATABASE /*!32312 IF NOT EXISTS*/ `fake_hotel_db` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_bin */;
 
@@ -43,7 +43,7 @@ CREATE TABLE `users` (
   `salary` varchar(10) COLLATE utf8_bin NOT NULL,
   `userType` varchar(10) COLLATE utf8_bin NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -52,6 +52,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (1,'Kit','12345','Kit Harington','spain, Barcelona','02306745','25/01/2017','3000 $','normal'),(2,'samual','12345','samual john','London','02237689','12/03/2016','4000 $','admin'),(3,'james','12345','james john','paris','9374034','24/12/2017','2000 $','normal'),(4,'peter','12345','peter samual ','india','34083645','24/03/2016','3000 $','normal'),(5,'mohamed','12345','mohamed ali','egypt, cairo','0482776498','30/01/2018','3000 $','normal');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -64,4 +65,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-11-04 14:02:50
+-- Dump completed on 2018-11-04 16:43:21
