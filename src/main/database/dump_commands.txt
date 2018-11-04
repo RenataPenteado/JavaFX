@@ -1,0 +1,2 @@
+// To create Dump file:
+C:\xampp\mysql\bin\mysqldump.exe --databases --add-drop-database --user root --password fake_hotel_db > fake_hotel_db.sql
