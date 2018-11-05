@@ -42,9 +42,6 @@ build/
 nbbuild/
 dist/
 nbdist/
-nbactions.xml
-nb-configuration.xml
-nbactions-release-profile.xml
 
 
 # OS
