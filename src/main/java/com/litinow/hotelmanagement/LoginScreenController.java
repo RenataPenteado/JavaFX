@@ -49,7 +49,6 @@ public class LoginScreenController implements Initializable {
     private TextField password;
     @FXML
     private StackPane stackerpane;
-    
 
     /**
      * Initializes the controller class.
@@ -63,25 +62,11 @@ public class LoginScreenController implements Initializable {
     private void loginbutton(MouseEvent event) {
 
         if (username.getText().equals("")) {
-            Image image = new Image("img/delete.png");
-            Notifications notification = Notifications.create()
-                    .title("Error")
-                    .text("Username Is Empty")
-                    .hideAfter(Duration.seconds(3))
-                    .position(Pos.BOTTOM_LEFT)
-                    .graphic(new ImageView(image));
-            notification.darkStyle();
-            notification.show();
+            errorNotification("Username Is Empty");
+
         } else if (password.getText().equals("")) {
-            Image image = new Image("img/delete.png");
-            Notifications notification = Notifications.create()
-                    .title("Error")
-                    .text("Password Is Empty")
-                    .hideAfter(Duration.seconds(3))
-                    .position(Pos.BOTTOM_LEFT)
-                    .graphic(new ImageView(image));
-            notification.darkStyle();
-            notification.show();
+            errorNotification("Password Is Empty");
+
         } else {
             boolean isExist = false;
             String userPass = "";
@@ -92,7 +77,7 @@ public class LoginScreenController implements Initializable {
                 PreparedStatement ps = (PreparedStatement) connection.prepareStatement(sql);
                 ResultSet rs = ps.executeQuery();
 
-                while (rs.next()) {
+                if (rs.next()) {
                     isExist = true;
                     userPass = rs.getString(3);
                     userType = rs.getString(9);
@@ -143,18 +128,13 @@ public class LoginScreenController implements Initializable {
 
                             homeScreen.show();
                         }
+                    } else {
+                        errorNotification("Check Your password again");
                     }
 
                 } else {
-                    Image image = new Image("img/delete.png");
-                    Notifications notification = Notifications.create()
-                            .title("Error")
-                            .text("Check Your username and password again")
-                            .hideAfter(Duration.seconds(3))
-                            .position(Pos.BOTTOM_LEFT)
-                            .graphic(new ImageView(image));
-                    notification.darkStyle();
-                    notification.show();
+                    errorNotification("Check Your username and password again");
+
                 }
 
             } catch (SQLException ex) {
@@ -164,36 +144,47 @@ public class LoginScreenController implements Initializable {
         }
 
     }
-    
-     @FXML
+
+    @FXML
     private void cancelButton(MouseEvent event) {
-        
+
         JFXDialogLayout dialogLayout = new JFXDialogLayout();
         dialogLayout.setHeading(new Text("Close"));
         dialogLayout.setBody(new Text("Do you want to exit?"));
-        
+
         JFXButton ok = new JFXButton("OK");
         JFXButton cancel = new JFXButton("Cancel");
-        
+
         JFXDialog dialog = new JFXDialog(stackerpane, dialogLayout, JFXDialog.DialogTransition.CENTER);
-        
+
         ok.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-               System.exit(0);
+                System.exit(0);
             }
         });
-        
+
         cancel.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 dialog.close();
             }
         });
-        
-        dialogLayout.setActions(ok,cancel);
+
+        dialogLayout.setActions(ok, cancel);
         dialog.show();
-        
-                
+
+    }
+
+    private void errorNotification(String message) {
+        Image image = new Image("img/delete.png");
+        Notifications notification = Notifications.create()
+                .title("Error")
+                .text(message)
+                .hideAfter(Duration.seconds(3))
+                .position(Pos.BOTTOM_LEFT)
+                .graphic(new ImageView(image));
+        notification.darkStyle();
+        notification.show();
     }
 }
