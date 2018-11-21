@@ -7,9 +7,9 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="730.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.litinow.hotelmanagement.HomeScreenController" style="-fx-background-image:url(img/person-woman-hotel-laptop.jpg)">
+<AnchorPane id="AnchorPane" prefHeight="730.0" prefWidth="1366.0" style="-fx-background-image:url(img/person-woman-hotel-laptop.jpg)" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.litinow.hotelmanagement.HomeScreenController">
    <children>
-      <Pane fx:id="pane_2" layoutX="583.0" layoutY="113.0" onMouseEntered="#mouse_hover_2" onMouseExited="#mouse_exit_2" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 6px;">
+      <Pane fx:id="pane_2" layoutX="583.0" layoutY="113.0" onMouseEntered="#mouse_hover_2" onMouseExited="#mouse_exit_2" opacity="0.7" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 6px;">
          <children>
             <ImageView fitHeight="90.0" fitWidth="90.0" layoutX="55.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -23,7 +23,7 @@
             </Label>
          </children>
       </Pane>
-      <Pane fx:id="pane_1" layoutX="331.0" layoutY="113.0" onMouseEntered="#mouse_hover_1" onMouseExited="#mouse_exit_1" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 6px;">
+      <Pane fx:id="pane_1" layoutX="331.0" layoutY="113.0" onMouseEntered="#mouse_hover_1" onMouseExited="#mouse_exit_1" opacity="0.7" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 6px;">
          <children>
             <ImageView fitHeight="90.0" fitWidth="90.0" layoutX="55.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -37,7 +37,7 @@
             </Label>
          </children>
       </Pane>
-      <Pane fx:id="pane_3" layoutX="839.0" layoutY="113.0" onMouseEntered="#mouse_hover_3" onMouseExited="#mouse_exit_3" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 6px;">
+      <Pane fx:id="pane_3" layoutX="839.0" layoutY="113.0" onMouseEntered="#mouse_hover_3" onMouseExited="#mouse_exit_3" opacity="0.7" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 6px;">
          <children>
             <ImageView fitHeight="90.0" fitWidth="90.0" layoutX="55.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -51,7 +51,7 @@
             </Label>
          </children>
       </Pane>
-      <Pane fx:id="pane_4" layoutX="465.0" layoutY="373.0" onMouseEntered="#mouse_hover_4" onMouseExited="#mouse_exit_4" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 6px;">
+      <Pane fx:id="pane_4" layoutX="465.0" layoutY="373.0" onMouseEntered="#mouse_hover_4" onMouseExited="#mouse_exit_4" opacity="0.7" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 6px;">
          <children>
             <ImageView fitHeight="90.0" fitWidth="90.0" layoutX="55.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -65,7 +65,7 @@
             </Label>
          </children>
       </Pane>
-      <Pane fx:id="pane_5" layoutX="714.0" layoutY="373.0" onMouseEntered="#mouse_hover_5" onMouseExited="#mouse_exit_5" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 6px;">
+      <Pane fx:id="pane_5" layoutX="714.0" layoutY="373.0" onMouseEntered="#mouse_hover_5" onMouseExited="#mouse_exit_5" opacity="0.7" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 6px;">
          <children>
             <ImageView fitHeight="90.0" fitWidth="90.0" layoutX="55.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
                <image>
