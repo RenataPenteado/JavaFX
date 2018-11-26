@@ -149,7 +149,7 @@ public class AdminScreenController implements Initializable {
     }
 
     @FXML
-    private void constumersScreen(MouseEvent event) {
+    private void costumersScreen(MouseEvent event) {
         Stage costumers = new Stage();
         Parent root = null;
 

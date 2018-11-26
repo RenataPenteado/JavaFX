@@ -8,7 +8,6 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-
 <StackPane fx:id="stackpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="730.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.litinow.hotelmanagement.AdminScreenController">
    <children>
       <AnchorPane id="AnchorPane" prefHeight="730.0" prefWidth="1366.0" style="-fx-background-image:url(img/person-woman-hotel-laptop.jpg)">
@@ -41,7 +40,7 @@
                   </Label>
                </children>
             </Pane>
-            <Pane fx:id="pane_3" layoutX="834.0" layoutY="123.0" onMouseClicked="#constumersScreen" onMouseEntered="#mouse_hover_3" onMouseExited="#mouse_exit_3" opacity="0.7" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 6px;">
+            <Pane fx:id="pane_3" layoutX="834.0" layoutY="123.0" onMouseClicked="#costumersScreen" onMouseEntered="#mouse_hover_3" onMouseExited="#mouse_exit_3" opacity="0.7" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 6px;">
                <children>
                   <ImageView fitHeight="90.0" fitWidth="90.0" layoutX="55.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
                      <image>
