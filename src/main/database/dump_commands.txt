@@ -1,2 +1,7 @@
+Esses comandos devem ser executados a partir do diretorio HotelManagementSystem\src\main\database 
+
 // To create Dump file:
 C:\xampp\mysql\bin\mysqldump.exe --databases --add-drop-database --user root --password fake_hotel_db > fake_hotel_db.sql
+
+// To revert Dump file:
+C:\xampp\mysql\bin\mysql -u root -p < fake_hotel_db.sql

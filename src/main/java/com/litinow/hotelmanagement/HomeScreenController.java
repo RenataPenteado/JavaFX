@@ -122,8 +122,8 @@ public class HomeScreenController implements Initializable {
         room.setScene(scene);
         room.initStyle(StageStyle.TRANSPARENT);
 
-        current.hide();
         room.show();
+        current.hide();        
 
     }
 
@@ -144,9 +144,9 @@ public class HomeScreenController implements Initializable {
         reservation.setScene(scene);
         reservation.initStyle(StageStyle.TRANSPARENT);
 
-        current.hide();
         reservation.show();
-
+        current.hide();
+               
     }
 
     @FXML
@@ -166,8 +166,8 @@ public class HomeScreenController implements Initializable {
         costumer.setScene(scene);
         costumer.initStyle(StageStyle.TRANSPARENT);
 
-        current.hide();
         costumer.show();
+        current.hide();
 
     }
 
@@ -200,8 +200,8 @@ public class HomeScreenController implements Initializable {
                 login.setScene(scene);
                 login.initStyle(StageStyle.TRANSPARENT);
 
-                current.hide();
                 login.show();
+                current.hide();                
             }
         });
 

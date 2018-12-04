@@ -54,9 +54,9 @@ public class SplashScreenController implements Initializable {
                 loginScreen.initStyle(StageStyle.TRANSPARENT);
                 
                 Stage current = (Stage) image.getScene().getWindow();
-                current.hide();
-                
                 loginScreen.show();
+                current.hide();
+                                
             }            
         });
         

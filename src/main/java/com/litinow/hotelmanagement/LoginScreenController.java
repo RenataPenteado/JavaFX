@@ -103,9 +103,8 @@ public class LoginScreenController implements Initializable {
                             adminScreen.setScene(scene);
                             adminScreen.initStyle(StageStyle.TRANSPARENT);
 
-                            current.hide();
-
                             adminScreen.show();
+                            current.hide();
 
                         } else {
                             //home screen
@@ -124,9 +123,9 @@ public class LoginScreenController implements Initializable {
                             homeScreen.setScene(scene);
                             homeScreen.initStyle(StageStyle.TRANSPARENT);
 
-                            current.hide();
-
                             homeScreen.show();
+                            current.hide();
+                            
                         }
                     } else {
                         errorNotification("Check Your password again");

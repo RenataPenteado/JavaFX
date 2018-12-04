@@ -122,9 +122,9 @@ public class AdminScreenController implements Initializable {
 
         employees.setScene(scene);
         employees.initStyle(StageStyle.TRANSPARENT);
-
-        current.hide();
+                
         employees.show();
+        current.hide();
     }
 
     @FXML
@@ -144,8 +144,9 @@ public class AdminScreenController implements Initializable {
         home.setScene(scene);
         home.initStyle(StageStyle.TRANSPARENT);
 
-        current.hide();
         home.show();
+        current.hide();
+        
     }
 
     @FXML
@@ -165,8 +166,8 @@ public class AdminScreenController implements Initializable {
         costumers.setScene(scene);
         costumers.initStyle(StageStyle.TRANSPARENT);
 
-        current.hide();
         costumers.show();
+        current.hide();
     }
 
     @FXML
@@ -226,9 +227,9 @@ public class AdminScreenController implements Initializable {
 
                 login.setScene(scene);
                 login.initStyle(StageStyle.TRANSPARENT);
-
-                current.hide();
+                
                 login.show();
+                current.hide();
             }
         });
 
