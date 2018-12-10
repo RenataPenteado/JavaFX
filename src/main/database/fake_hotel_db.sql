@@ -26,6 +26,36 @@ CREATE DATABASE /*!32312 IF NOT EXISTS*/ `fake_hotel_db` /*!40100 DEFAULT CHARAC
 USE `fake_hotel_db`;
 
 --
+-- Table structure for table `room`
+--
+
+DROP TABLE IF EXISTS `room`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `room` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `roomType` varchar(5) COLLATE utf8_bin NOT NULL,
+  `roomNumber` varchar(5) COLLATE utf8_bin NOT NULL,
+  `numberOfPeople` varchar(5) COLLATE utf8_bin NOT NULL,
+  `numberOfFloor` varchar(15) COLLATE utf8_bin NOT NULL,
+  `roomPhone` varchar(10) COLLATE utf8_bin NOT NULL,
+  `roomPrice` varchar(10) COLLATE utf8_bin NOT NULL,
+  `roomStatus` varchar(10) COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `room`
+--
+
+LOCK TABLES `room` WRITE;
+/*!40000 ALTER TABLE `room` DISABLE KEYS */;
+INSERT INTO `room` VALUES (1,'A*','23','2','4','02365','120 $','available'),(2,'A','3','2','6','02357','100 $','available'),(3,'B','25','2','12','023697','90 $','busy'),(4,'B*','3','3','9','023876','100 $','available'),(5,'A','2','1','3','023658','130 $','busy');
+/*!40000 ALTER TABLE `room` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `users`
 --
 
@@ -65,4 +95,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-11-19 19:21:19
+-- Dump completed on 2018-12-10 19:37:51

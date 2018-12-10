@@ -4,65 +4,85 @@
 <?import com.jfoenix.controls.JFXCheckBox?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="730.0" prefWidth="1366.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="com.litinow.hotelmanagement.RoonScreenController" style="-fx-background-image:url(img/person-woman-hotel-laptop.jpg)">
+<StackPane fx:id="stackpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="730.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.litinow.hotelmanagement.RoomScreenController">
    <children>
-      <JFXTreeTableView layoutX="186.0" layoutY="165.0" opacity="0.7" prefHeight="700.0" prefWidth="900.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0" />
-      <Pane layoutX="37.0" layoutY="127.0" opacity="0.7" prefHeight="700.0" prefWidth="420.0" style="-fx-background-color: #fff; -fx-background-radius: 6 px;" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="15.0">
+      <AnchorPane id="AnchorPane" prefHeight="730.0" prefWidth="1366.0" style="-fx-background-image:url(img/person-woman-hotel-laptop.jpg)">
          <children>
-            <Pane layoutX="20.0" layoutY="127.0" prefHeight="130.0" prefWidth="380.0" style="-fx-border-radius: 15; -fx-border-color: #ccc; -fx-border-width: 2 px;">
+            <JFXTreeTableView fx:id="treeView" layoutX="186.0" layoutY="165.0" opacity="0.7" prefHeight="700.0" prefWidth="900.0" stylesheets="@../styles/hotel.css" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0" />
+            <Pane layoutX="14.0" layoutY="15.0" opacity="0.7" prefHeight="700.0" prefWidth="420.0" style="-fx-background-color: #fff; -fx-background-radius: 6 px;" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="15.0">
                <children>
-                  <JFXTextField focusColor="#09e2a7" layoutX="25.0" layoutY="27.0" prefHeight="25.0" prefWidth="331.0" promptText="Search by room number" />
-                  <JFXButton buttonType="RAISED" layoutX="80.0" layoutY="78.0" prefWidth="80.0" ripplerFill="WHITE" style="-fx-background-color: #09e2a7;" text="Search" textFill="WHITE">
+                  <Pane layoutX="20.0" layoutY="127.0" prefHeight="130.0" prefWidth="380.0" style="-fx-border-radius: 15; -fx-border-color: #ccc; -fx-border-width: 2 px;">
+                     <children>
+                        <JFXTextField fx:id="search_text" focusColor="#09e2a7" layoutX="25.0" layoutY="14.0" prefHeight="25.0" prefWidth="331.0" promptText="Search by room number" />
+                        <JFXButton buttonType="RAISED" layoutX="80.0" layoutY="78.0" onMouseClicked="#searchByRoomNumber" prefWidth="80.0" ripplerFill="WHITE" style="-fx-background-color: #09e2a7;" text="Search" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" layoutX="215.0" layoutY="80.0" onMouseClicked="#makeItAvailable" prefWidth="80.0" ripplerFill="WHITE" style="-fx-background-color: #09e2a7;" text="Available" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="20.0" layoutY="326.0" prefHeight="130.0" prefWidth="380.0" style="-fx-border-radius: 15; -fx-border-color: #ccc; -fx-border-width: 2 px;">
+                     <children>
+                        <JFXButton buttonType="RAISED" layoutX="142.0" layoutY="69.0" onMouseClicked="#searchByStatus" prefWidth="80.0" ripplerFill="WHITE" style="-fx-background-color: #09e2a7;" text="Search" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXCheckBox fx:id="busy" checkedColor="#09e2a7" layoutX="71.0" layoutY="32.0" onAction="#searchBusy" text="Busy">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXCheckBox>
+                        <JFXCheckBox fx:id="available" checkedColor="#09e2a7" layoutX="233.0" layoutY="32.0" onAction="#searchAvailable" text="Available">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXCheckBox>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="20.0" layoutY="520.0" prefHeight="130.0" prefWidth="380.0" style="-fx-border-radius: 15; -fx-border-color: #ccc; -fx-border-width: 2 px;">
+                     <children>
+                        <JFXButton buttonType="RAISED" layoutX="80.0" layoutY="50.0" onMouseClicked="#goBack" prefWidth="80.0" ripplerFill="WHITE" style="-fx-background-color: #09e2a7;" text="Back" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" layoutX="215.0" layoutY="50.0" onMouseClicked="#close" prefWidth="80.0" ripplerFill="WHITE" style="-fx-background-color: #09e2a7;" text="Close" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </Pane>
+                  <Label layoutX="23.0" layoutY="274.0" text="You can seach about busy and available room by room by click on &#10;&#9;&#9;&#9;&#9;Busy and Available room">
                      <font>
-                        <Font size="14.0" />
+                        <Font name="System Bold" size="12.0" />
                      </font>
-                  </JFXButton>
-                  <JFXButton buttonType="RAISED" layoutX="215.0" layoutY="80.0" prefWidth="80.0" ripplerFill="WHITE" style="-fx-background-color: #09e2a7;" text="Available" textFill="WHITE">
+                  </Label>
+                  <Label layoutX="74.0" layoutY="72.0" text="You can seach about room by room number and&#10;&#9;&#9; &#9;make it avalable">
                      <font>
-                        <Font size="14.0" />
+                        <Font name="System Bold" size="12.0" />
                      </font>
-                  </JFXButton>
-               </children>
-            </Pane>
-            <Pane layoutX="20.0" layoutY="281.0" prefHeight="130.0" prefWidth="380.0" style="-fx-border-radius: 15; -fx-border-color: #ccc; -fx-border-width: 2 px;">
-               <children>
-                  <JFXButton buttonType="RAISED" layoutX="142.0" layoutY="69.0" prefWidth="80.0" ripplerFill="WHITE" style="-fx-background-color: #09e2a7;" text="Search" textFill="WHITE">
+                  </Label>
+                  <Label layoutX="128.0" layoutY="478.0" text="You can go back or close app">
                      <font>
-                        <Font size="14.0" />
+                        <Font name="System Bold" size="12.0" />
                      </font>
-                  </JFXButton>
-                  <JFXCheckBox checkedColor="#09e2a7" layoutX="71.0" layoutY="32.0" text="Busy">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </JFXCheckBox>
-                  <JFXCheckBox checkedColor="#09e2a7" layoutX="233.0" layoutY="32.0" text="Available">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </JFXCheckBox>
-               </children>
-            </Pane>
-            <Pane layoutX="20.0" layoutY="436.0" prefHeight="130.0" prefWidth="380.0" style="-fx-border-radius: 15; -fx-border-color: #ccc; -fx-border-width: 2 px;">
-               <children>
-                  <JFXButton buttonType="RAISED" layoutX="80.0" layoutY="50.0" prefWidth="80.0" ripplerFill="WHITE" style="-fx-background-color: #09e2a7;" text="Back" textFill="WHITE">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </JFXButton>
-                  <JFXButton buttonType="RAISED" layoutX="215.0" layoutY="50.0" prefWidth="80.0" ripplerFill="WHITE" style="-fx-background-color: #09e2a7;" text="Close" textFill="WHITE">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </JFXButton>
+                  </Label>
                </children>
             </Pane>
          </children>
-      </Pane>
+      </AnchorPane>
    </children>
-</AnchorPane>
+</StackPane>
