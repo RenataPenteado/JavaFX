@@ -56,7 +56,7 @@ public class RoomScreenController implements Initializable {
     String status = null;
    
     @FXML
-    private JFXTreeTableView<Room> treeView;
+    private JFXTreeTableView<Costumers> treeView;
     @FXML
     private JFXTextField search_text;
     @FXML
@@ -74,86 +74,86 @@ public class RoomScreenController implements Initializable {
 
     public void loadAllRooms(String sql) {
 
-        JFXTreeTableColumn<Room, String> room_id = new JFXTreeTableColumn<>("Room Id");
+        JFXTreeTableColumn<Costumers, String> room_id = new JFXTreeTableColumn<>("Room Id");
         room_id.setPrefWidth(100);
-        room_id.setCellValueFactory(new Callback<TreeTableColumn.CellDataFeatures<Room, String>, ObservableValue<String>>() {
+        room_id.setCellValueFactory(new Callback<TreeTableColumn.CellDataFeatures<Costumers, String>, ObservableValue<String>>() {
             @Override
-            public ObservableValue<String> call(TreeTableColumn.CellDataFeatures<Room, String> param) {
+            public ObservableValue<String> call(TreeTableColumn.CellDataFeatures<Costumers, String> param) {
                 return param.getValue().getValue().id;
             }
 
         });
 
-        JFXTreeTableColumn<Room, String> room_type = new JFXTreeTableColumn<>("Room Type");
+        JFXTreeTableColumn<Costumers, String> room_type = new JFXTreeTableColumn<>("Room Type");
         room_type.setPrefWidth(110);
-        room_type.setCellValueFactory(new Callback<TreeTableColumn.CellDataFeatures<Room, String>, ObservableValue<String>>() {
+        room_type.setCellValueFactory(new Callback<TreeTableColumn.CellDataFeatures<Costumers, String>, ObservableValue<String>>() {
             @Override
-            public ObservableValue<String> call(TreeTableColumn.CellDataFeatures<Room, String> param) {
+            public ObservableValue<String> call(TreeTableColumn.CellDataFeatures<Costumers, String> param) {
                 return param.getValue().getValue().roomType;
             }
 
         });
 
-        JFXTreeTableColumn<Room, String> room_number = new JFXTreeTableColumn<>("Room Number");
+        JFXTreeTableColumn<Costumers, String> room_number = new JFXTreeTableColumn<>("Room Number");
         room_number.setPrefWidth(110);
-        room_number.setCellValueFactory(new Callback<TreeTableColumn.CellDataFeatures<Room, String>, ObservableValue<String>>() {
+        room_number.setCellValueFactory(new Callback<TreeTableColumn.CellDataFeatures<Costumers, String>, ObservableValue<String>>() {
             @Override
-            public ObservableValue<String> call(TreeTableColumn.CellDataFeatures<Room, String> param) {
+            public ObservableValue<String> call(TreeTableColumn.CellDataFeatures<Costumers, String> param) {
                 return param.getValue().getValue().roomNumber;
             }
 
         });
 
-        JFXTreeTableColumn<Room, String> num_of_people = new JFXTreeTableColumn<>("Number Of People");
+        JFXTreeTableColumn<Costumers, String> num_of_people = new JFXTreeTableColumn<>("Number Of People");
         num_of_people.setPrefWidth(130);
-        num_of_people.setCellValueFactory(new Callback<TreeTableColumn.CellDataFeatures<Room, String>, ObservableValue<String>>() {
+        num_of_people.setCellValueFactory(new Callback<TreeTableColumn.CellDataFeatures<Costumers, String>, ObservableValue<String>>() {
             @Override
-            public ObservableValue<String> call(TreeTableColumn.CellDataFeatures<Room, String> param) {
+            public ObservableValue<String> call(TreeTableColumn.CellDataFeatures<Costumers, String> param) {
                 return param.getValue().getValue().numberOfPeople;
             }
 
         });
 
-        JFXTreeTableColumn<Room, String> floor_number = new JFXTreeTableColumn<>("Floor Number");
+        JFXTreeTableColumn<Costumers, String> floor_number = new JFXTreeTableColumn<>("Floor Number");
         floor_number.setPrefWidth(120);
-        floor_number.setCellValueFactory(new Callback<TreeTableColumn.CellDataFeatures<Room, String>, ObservableValue<String>>() {
+        floor_number.setCellValueFactory(new Callback<TreeTableColumn.CellDataFeatures<Costumers, String>, ObservableValue<String>>() {
             @Override
-            public ObservableValue<String> call(TreeTableColumn.CellDataFeatures<Room, String> param) {
+            public ObservableValue<String> call(TreeTableColumn.CellDataFeatures<Costumers, String> param) {
                 return param.getValue().getValue().floorNumber;
             }
 
         });
 
-        JFXTreeTableColumn<Room, String> room_phone = new JFXTreeTableColumn<>("Room Number");
+        JFXTreeTableColumn<Costumers, String> room_phone = new JFXTreeTableColumn<>("Room Number");
         room_phone.setPrefWidth(110);
-        room_phone.setCellValueFactory(new Callback<TreeTableColumn.CellDataFeatures<Room, String>, ObservableValue<String>>() {
+        room_phone.setCellValueFactory(new Callback<TreeTableColumn.CellDataFeatures<Costumers, String>, ObservableValue<String>>() {
             @Override
-            public ObservableValue<String> call(TreeTableColumn.CellDataFeatures<Room, String> param) {
+            public ObservableValue<String> call(TreeTableColumn.CellDataFeatures<Costumers, String> param) {
                 return param.getValue().getValue().roomNumber;
             }
 
         });
 
-        JFXTreeTableColumn<Room, String> room_price = new JFXTreeTableColumn<>("Room Price");
+        JFXTreeTableColumn<Costumers, String> room_price = new JFXTreeTableColumn<>("Room Price");
         room_price.setPrefWidth(110);
-        room_price.setCellValueFactory(new Callback<TreeTableColumn.CellDataFeatures<Room, String>, ObservableValue<String>>() {
+        room_price.setCellValueFactory(new Callback<TreeTableColumn.CellDataFeatures<Costumers, String>, ObservableValue<String>>() {
             @Override
-            public ObservableValue<String> call(TreeTableColumn.CellDataFeatures<Room, String> param) {
+            public ObservableValue<String> call(TreeTableColumn.CellDataFeatures<Costumers, String> param) {
                 return param.getValue().getValue().roomPrice;
             }
 
         });
 
-        JFXTreeTableColumn<Room, String> room_status = new JFXTreeTableColumn<>("Room Status");
+        JFXTreeTableColumn<Costumers, String> room_status = new JFXTreeTableColumn<>("Room Status");
         room_status.setPrefWidth(110);
-        room_status.setCellValueFactory(new Callback<TreeTableColumn.CellDataFeatures<Room, String>, ObservableValue<String>>() {
+        room_status.setCellValueFactory(new Callback<TreeTableColumn.CellDataFeatures<Costumers, String>, ObservableValue<String>>() {
             @Override
-            public ObservableValue<String> call(TreeTableColumn.CellDataFeatures<Room, String> param) {
+            public ObservableValue<String> call(TreeTableColumn.CellDataFeatures<Costumers, String> param) {
                 return param.getValue().getValue().roomStatus;
             }
 
         });
-        ObservableList<Room> rooms = FXCollections.observableArrayList();
+        ObservableList<Costumers> rooms = FXCollections.observableArrayList();
         Connection connection = DBConnection.getConnection();
         try {
             PreparedStatement ps = (PreparedStatement) connection.prepareStatement(sql);
@@ -161,14 +161,14 @@ public class RoomScreenController implements Initializable {
             ResultSet rs = ps.executeQuery();
 
             while (rs.next()) {
-                rooms.add(new Room(rs.getInt(1) + "", rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6), rs.getString(7), rs.getString(8)));
+                rooms.add(new Costumers(rs.getInt(1) + "", rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6), rs.getString(7), rs.getString(8)));
 
             }
         } catch (SQLException ex) {
             Logger.getLogger(RoomScreenController.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-        final TreeItem<Room> root = new RecursiveTreeItem<>(rooms, RecursiveTreeObject::getChildren);
+        final TreeItem<Costumers> root = new RecursiveTreeItem<>(rooms, RecursiveTreeObject::getChildren);
         treeView.getColumns().setAll(room_id, room_type,room_number, num_of_people, floor_number, room_phone, room_price, room_status);
         treeView.setRoot(root);
         treeView.setShowRoot(false);

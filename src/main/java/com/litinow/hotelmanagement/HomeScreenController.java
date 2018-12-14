@@ -155,7 +155,7 @@ public class HomeScreenController implements Initializable {
         Parent root = null;
 
         try {
-            root = FXMLLoader.load(getClass().getResource("/fxml/CostumerInfoScreen.fxml"));
+            root = FXMLLoader.load(getClass().getResource("/fxml/CostumersScreen.fxml"));
         } catch (IOException ex) {
             Logger.getLogger(AdminScreenController.class.getName()).log(Level.SEVERE, null, ex);
 

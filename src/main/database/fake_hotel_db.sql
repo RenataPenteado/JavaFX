@@ -26,6 +26,43 @@ CREATE DATABASE /*!32312 IF NOT EXISTS*/ `fake_hotel_db` /*!40100 DEFAULT CHARAC
 USE `fake_hotel_db`;
 
 --
+-- Table structure for table `costumer`
+--
+
+DROP TABLE IF EXISTS `costumer`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `costumer` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `name` varchar(20) COLLATE utf8_bin NOT NULL,
+  `email` varchar(20) COLLATE utf8_bin NOT NULL,
+  `address` varchar(50) COLLATE utf8_bin NOT NULL,
+  `phone` int(10) NOT NULL,
+  `numOfPeople` varchar(10) COLLATE utf8_bin NOT NULL,
+  `paymentType` varchar(10) COLLATE utf8_bin NOT NULL,
+  `duration` varchar(10) COLLATE utf8_bin NOT NULL,
+  `roomType` varchar(10) COLLATE utf8_bin NOT NULL,
+  `roomNumber` varchar(10) COLLATE utf8_bin NOT NULL,
+  `startDate` varchar(10) COLLATE utf8_bin NOT NULL,
+  `endDate` varchar(10) COLLATE utf8_bin NOT NULL,
+  `price` varchar(10) COLLATE utf8_bin NOT NULL,
+  `services` varchar(10) COLLATE utf8_bin NOT NULL,
+  `total` varchar(10) COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `costumer`
+--
+
+LOCK TABLES `costumer` WRITE;
+/*!40000 ALTER TABLE `costumer` DISABLE KEYS */;
+INSERT INTO `costumer` VALUES (1,'Samuel Peter','sam@gmail.com','Spain',2293775,'2','5','2','A*','45','01/02/2018','03/02/2018','150','30','180'),(2,'John','john@gmail.com','London',2336655,'2','5','4','A*','23','03/02/2018','07/02/2018','200','20','220');
+/*!40000 ALTER TABLE `costumer` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `room`
 --
 
@@ -95,4 +132,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-12-10 19:37:51
+-- Dump completed on 2018-12-14 22:23:33
