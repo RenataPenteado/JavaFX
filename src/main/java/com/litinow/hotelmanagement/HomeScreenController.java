@@ -150,12 +150,12 @@ public class HomeScreenController implements Initializable {
     }
 
     @FXML
-    private void costumerScreen(MouseEvent event) {
-        Stage costumer = new Stage();
+    private void customerScreen(MouseEvent event) {
+        Stage customer = new Stage();
         Parent root = null;
 
         try {
-            root = FXMLLoader.load(getClass().getResource("/fxml/CostumersScreen.fxml"));
+            root = FXMLLoader.load(getClass().getResource("/fxml/CustomersScreen.fxml"));
         } catch (IOException ex) {
             Logger.getLogger(AdminScreenController.class.getName()).log(Level.SEVERE, null, ex);
 
@@ -163,10 +163,10 @@ public class HomeScreenController implements Initializable {
         Stage current = (Stage) pane_1.getScene().getWindow();
         Scene scene = new Scene(root);
 
-        costumer.setScene(scene);
-        costumer.initStyle(StageStyle.TRANSPARENT);
+        customer.setScene(scene);
+        customer.initStyle(StageStyle.TRANSPARENT);
 
-        costumer.show();
+        customer.show();
         current.hide();
 
     }

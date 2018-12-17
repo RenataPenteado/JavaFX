@@ -26,13 +26,13 @@ CREATE DATABASE /*!32312 IF NOT EXISTS*/ `fake_hotel_db` /*!40100 DEFAULT CHARAC
 USE `fake_hotel_db`;
 
 --
--- Table structure for table `costumer`
+-- Table structure for table `customer`
 --
 
-DROP TABLE IF EXISTS `costumer`;
+DROP TABLE IF EXISTS `customer`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `costumer` (
+CREATE TABLE `customer` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `name` varchar(20) COLLATE utf8_bin NOT NULL,
   `email` varchar(20) COLLATE utf8_bin NOT NULL,
@@ -53,13 +53,13 @@ CREATE TABLE `costumer` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `costumer`
+-- Dumping data for table `customer`
 --
 
-LOCK TABLES `costumer` WRITE;
-/*!40000 ALTER TABLE `costumer` DISABLE KEYS */;
-INSERT INTO `costumer` VALUES (1,'Samuel Peter','sam@gmail.com','Spain',2293775,'2','5','2','A*','45','01/02/2018','03/02/2018','150','30','180'),(2,'John','john@gmail.com','London',2336655,'2','5','4','A*','23','03/02/2018','07/02/2018','200','20','220');
-/*!40000 ALTER TABLE `costumer` ENABLE KEYS */;
+LOCK TABLES `customer` WRITE;
+/*!40000 ALTER TABLE `customer` DISABLE KEYS */;
+INSERT INTO `customer` VALUES (1,'Samuel Peter','sam@gmail.com','Spain',2293775,'2','5','2','A*','45','01/02/2018','03/02/2018','150','30','180'),(2,'John','john@gmail.com','London',2336655,'2','5','4','A*','23','03/02/2018','07/02/2018','200','20','220');
+/*!40000 ALTER TABLE `customer` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --

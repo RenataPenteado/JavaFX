@@ -40,14 +40,14 @@
                   </Label>
                </children>
             </Pane>
-            <Pane fx:id="pane_3" layoutX="839.0" layoutY="113.0" onMouseClicked="#costumerScreen" onMouseEntered="#mouse_hover_3" onMouseExited="#mouse_exit_3" opacity="0.7" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 6px;">
+            <Pane fx:id="pane_3" layoutX="839.0" layoutY="113.0" onMouseClicked="#customerScreen" onMouseEntered="#mouse_hover_3" onMouseExited="#mouse_exit_3" opacity="0.7" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 6px;">
                <children>
                   <ImageView fitHeight="90.0" fitWidth="90.0" layoutX="55.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../img/005-user.png" />
                      </image>
                   </ImageView>
-                  <Label layoutX="43.0" layoutY="140.0" text="Costumers Info">
+                  <Label layoutX="43.0" layoutY="140.0" text="Customers Info">
                      <font>
                         <Font name="System Bold" size="16.0" />
                      </font>

@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="730.0" prefWidth="1366.0" style="-fx-background-image:url(img/person-woman-hotel-laptop.jpg)" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.litinow.hotelmanagement.CostumersScreenController">
+<AnchorPane id="AnchorPane" prefHeight="730.0" prefWidth="1366.0" style="-fx-background-image:url(img/person-woman-hotel-laptop.jpg)" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.litinow.hotelmanagement.CustomersScreenController">
    <children>
       <JFXTreeTableView fx:id="treeView" layoutX="37.0" layoutY="76.0" opacity="0.7" prefHeight="600.0" prefWidth="1350.0" style="-fx-background-color: #fff; -fx-background-radius: 6 px;" stylesheets="@../styles/hotel.css" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0" />
       <Pane layoutX="20.0" layoutY="628.0" opacity="0.7" prefHeight="80.0" prefWidth="1382.0" style="-fx-background-color: #fff; -fx-background-radius: 6 px;" AnchorPane.bottomAnchor="20.0">

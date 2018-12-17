@@ -14,7 +14,7 @@ import javafx.beans.property.StringProperty;
  *
  * @author Renata
  */
-public class Costumers extends RecursiveTreeObject<Costumers> {
+public class Customers extends RecursiveTreeObject<Customers> {
 
     StringProperty id;
     StringProperty roomType;
@@ -25,11 +25,11 @@ public class Costumers extends RecursiveTreeObject<Costumers> {
     StringProperty roomPrice;
     StringProperty roomStatus;
 
-    public Costumers() {
+    public Customers() {
         super();
     }
 
-    public Costumers(String id, String roomType, String roomNumber, String numberOfPeople, String floorNumber, String roomPhone, String roomPrice, String roomStatus) {
+    public Customers(String id, String roomType, String roomNumber, String numberOfPeople, String floorNumber, String roomPhone, String roomPrice, String roomStatus) {
         this.id = new SimpleStringProperty(id);
         this.roomType = new SimpleStringProperty(roomType);
         this.roomNumber = new SimpleStringProperty(roomNumber);
