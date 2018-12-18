@@ -155,7 +155,7 @@ public class AdminScreenController implements Initializable {
         Parent root = null;
 
         try {
-            root = FXMLLoader.load(getClass().getResource("/fxml/CustomersScreen.fxml"));
+            root = FXMLLoader.load(getClass().getResource("/fxml/CustomerInfoScreen.fxml"));
         } catch (IOException ex) {
             Logger.getLogger(AdminScreenController.class.getName()).log(Level.SEVERE, null, ex);
 
